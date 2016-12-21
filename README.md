@@ -1,5 +1,5 @@
-# nextcloud desktop client
-:computer: theme and build instructions for the nextcloud desktop client
+# stowpal desktop client
+:computer: theme and build instructions for the stowpal desktop client
 
 Based on https://github.com/owncloud/client/blob/master/doc/building.rst
 
@@ -17,7 +17,7 @@ Run:
 ```bash
 mkdir build-linux
 cd build-linux
-cmake -D OEM_THEME_DIR=`pwd`/../nextcloudtheme ../client
+cmake -D OEM_THEME_DIR=`pwd`/../stowpaltheme ../client
 make
 make install
 ```
@@ -89,13 +89,13 @@ The docker image contains the toolchain to build the windows binary.
 Build it:
 
 ```bash
-docker build -t nextcloud-client-win32:<version> client/admin/win/docker/
+docker build -t stowpal-client-win32:<version> client/admin/win/docker/
 ```
 
 ### Building the binary
 
 ```bash
-docker run -v "$PWD:/home/user/" nextcloud-client-win32:2.2.2 /home/user/win/build.sh $(id -u)
+docker run -v "$PWD:/home/user/" stowpal-client-win32:2.2.4 /home/user/win/build.sh $(id -u)
 ```
 
 ## Building a release
